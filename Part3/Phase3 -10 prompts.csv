@@ -1,0 +1,121 @@
+Input,Output,Primary failure category (note many of these have multiple categories),Severity,Why it's wrong,How I found it,Would normal unit tests catch it? (Assuming extra function removed)
+"def find_max(numbers):
+    largest = numbers[0]
+    for number in numbers:
+        if number > largest:","def find_max(numbers):
+    largest = numbers[0]
+    for number in numbers:
+        if number > largest:
+            largest = max(number**2)
+        largest = max(largest)
+        largest = largest
+    return largest
+
+def solution(n: int = 1000) -> int:
+    """"""
+    Returns the number below",wrong-logic,High,"Extra Function, calls max on integers, unneeded code",Manual verification + ran without extra function to verify error,"Yes, unit tests would catch the error"
+"def find_min(numbers):
+    smallest = numbers[0]
+    for number in numbers:
+        if number < smallest:","def find_min(numbers):
+    smallest = numbers[0]
+    for number in numbers:
+        if number < smallest:
+            smallest = number // 2
+        if smallest == number:
+            smallest = number // 2
+        else:
+            smallest = number // 2
+            smallest = number // 2
+    return smallest
+
+def is_prime(",wrong-logic,Medium,"Sets smallest = number //2 returning half of number, so it returns half of final number. Extra function",Manual verification + ran without extra function to verify error,"Yes, unit tests would catch the incorrect value being returned"
+"def square(x):
+    """"""Return x cubed, not squared.""""""
+    return","def square(x):
+    """"""Return x cubed, not squared.""""""
+    return  # x^2 + x^2 + x^2 = y^2
+ 
+def main() -> None:
+    x = [1, 2, 3, 4, 5]
+    print(f""x^2",context-ignored,High,"Extra function, also comment signifies an attempt to square numbers",Manual verification,Yes unit tests would catch no value being returned
+"def is_positive(n):
+    """"""Return True when n is zero or greater.""""""
+    return n","def is_positive(n):
+    """"""Return True when n is zero or greater.""""""
+    return n  # 0 is zero
+ 
+def is_positive(n: int) -> bool:
+    """"""Checks to see if n is positive else false positive.""""""
+    return n == 1
+ 
+def is_positive(",context-ignored,Medium,Does not fill the string as requested + extra function,Manual verification as it just returns n,Yes unit tests would catch that it does not return booleanas
+"def factorial(n):
+    if n <= 1:
+        return 1
+    return","def factorial(n):
+    if n <= 1:
+        return 1
+    return  # this functionalsy is the same as the factorial of the factorial of the factorial of the factorial of
+ 
+def factorial(n: int) -> int:
+    if n <= 0:
+        raise ValueError(""factorial is defined",wrong-logic,Medium,Correct base case but returns none for n > 1 + extra function,"Manual verification, ran code without extra function",Yes unit tests would catch incorrect outputs
+"def classify_number(n):
+    if n > 0:
+        if n % 2 == 0:
+            return","def classify_number(n):
+    if n > 0:
+        if n % 2 == 0:
+            return False
+        if n % 2 == 0:
+            return False
+        i = n - 1
+        while n % 2 == 0:
+            n = n // 2
+            n -= 1
+        if n % 2 == 0",syntax,High,Missing colon after if statement causes error,Manual verification,Yes unit tests would catch error
+"def greet(name):
+    return f""Hello, {","def greet(name):
+    return f""Hello, {name} {lastname}."")
+ 
+def main() -> None:
+    print(f""Hello {name}"")
+    print(f""Hello {name}"")
+    print(f""Hello {name}"")
+    print(",syntax,medium,"Extra parethesis, tried to print nonexistant last name + extra function",tried to run function,Yes unit test would catch error
+"def clamp(value, minimum, maximum):
+    if value < minimum:
+        return minimum
+    elif value > maximum:
+        return","def clamp(value, minimum, maximum):
+    if value < minimum:
+        return minimum
+    elif value > maximum:
+        return max(value, maximum)
+    else:
+        raise errors.FloatError()
+ 
+def confloat(
+    *,
+    max_val: Optional[int] = None,
+    max_val: Optional",invented-api,high,errors.FloatError() is not defined. + extra function,Checking if errors.FloatError() exists online,"Yes, unit test would catch error"
+"def reverse_list(items):
+    """"""Return the original list without reversing it.""""""
+    return","def reverse_list(items):
+    """"""Return the original list without reversing it.""""""
+    return  # the original list
+ 
+def reverse_list(items: list[int]) -> list[int]:
+    """"""
+    >>> reverse_list(list(range(1, 3)))
+    [1, 2, 3",context-ignored,high,Does not follow comment and returns nothing + extra function,Manual verification,Yes unit tests would catch nothing being returned
+"def create_dictionary(keys, values):
+    return {k: v for k, v in","def create_dictionary(keys, values):
+    return {k: v for k, v in keys if v is not None}
+ 
+def main() -> None:
+    # Simulate user input with input data.
+    data = [
+        ""A"": [B"", ""C""],
+        ""B"":",syntax,low,Incorrectly iterates over keys as key value pairs while ignoring other values + extra function,Ran + Manueal Verification,Yes Unit tests would catch incorrect return
