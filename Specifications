@@ -6,3 +6,5 @@ torch==2.11.0+cu130
 tqdm==4.67.3
 transformers==5.21.0
 wandb==0.28.1
+
+nanoGPT commit 3adf61e154c3fe3fca428ad6bc3818b27a3b8291
