@@ -8,6 +8,8 @@ To run these, just run all the cells in Google Colab. Make sure you had a Github
 
 If you want to run my files there is a notebook in the Models folder. Note you must upload a checkpoint and give it the file path
 
+Required version are saved in specifications
+
 Also included are my reflection and my AI use log in one file
 
 Email me at mjdennis@mtu.edu if you have any questions
